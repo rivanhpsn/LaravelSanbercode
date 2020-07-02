@@ -5,6 +5,7 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper ">
     <!-- Content Header (Page header) -->
+    <div class="card">
     <table class="table table-bordered">
         <thead>                  
           <tr>
@@ -57,6 +58,7 @@
           </tr>
         </tbody>
       </table>
+    </div>
   <!-- /.content-wrapper -->
 @endsection
 
