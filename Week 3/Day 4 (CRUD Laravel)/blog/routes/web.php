@@ -22,3 +22,6 @@
 Route::get('/pertanyaan', 'PertanyaanController@index');
 Route::get('/pertanyaan/create', 'PertanyaanController@create');
 Route::post('/pertanyaan', 'PertanyaanController@store');
+Route::get('/jawaban/{id}', 'JawabanController@index');
+Route::get('/jawaban/{id}/create', 'JawabanController@create');
+Route::post('/jawaban/{id}', 'JawabanController@store');

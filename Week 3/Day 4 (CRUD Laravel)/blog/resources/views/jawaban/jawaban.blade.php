@@ -2,33 +2,31 @@
 
 @section('content')
 <div class="content-wrapper ">
-    <div align="right">
-    <a class="btn btn-primary"  href="/pertanyaan/create" role="button" >+ Tambah Pertanyaan</a>
-    </div>
+    
     <div class="card">
+        <div class = "card-header">
+            <h2 class="card-title">Jawaban-jawaban dari pertanyaan {{$data['pertanyaan_id']}}</h2>
+        </div>
         <div class="card-body">
             <table id="datatable" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                     <th scope="col">No.</th>
-                    <th scope="col">Judul Pertanyaan</th>
-                    <th scope="col">Isi</th>
-                    <th scope="col">Aksi</th>
+                    <th scope="col">Jawaban</th>
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach ($pertanyaan as $key => $pertanyaan)
-                        <tr id="{{$pertanyaan->id}}">
+                    @foreach ($data['jawaban'] as $key => $jawaban)
+                        <tr id="{{$jawaban->id}}">
                         <td> {{ $key + 1}}</td>
-                        <td> {{ $pertanyaan -> judul}}</td>
-                        <td> {{ $pertanyaan -> isi}}</td>
-                        <td><a class="btn btn-primary"  href="/jawaban/{{$pertanyaan->id}}" role="button" >Jawab</a></td>
+                        <td> {{ $jawaban -> isi}}</td>
                         {{-- <td> {{ $pertanyaan -> like}}</td>
                         <td> {{ $pertanyaan -> dislike}}</td> --}}
                         </tr>
                     @endforeach
                 </tbody>
             </table>
+            <a class="btn btn-primary"  href="/jawaban/{{$data['pertanyaan_id']}}/create" role="button" >Masukkan Jawaban</a>
         </div>
     </div>
 </div>

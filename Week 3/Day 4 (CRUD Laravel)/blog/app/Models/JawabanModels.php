@@ -4,13 +4,18 @@ use Illuminate\Support\Facades\DB;
 
 class JawabanModels{
     public static function get_all(){
-        $pertanyaan = DB::table('jawaban')->get();
-        return $pertanyaan;
+        $jawaban = DB::table('jawaban')->get();
+        return $jawaban;
     }
 
     public static function save($data){
         $new_jaw = DB::table('jawaban')->insert($data);
         return $new_jaw;
+    }
+
+    public static function get_from($pertanyaan_id){
+        $jawaban = DB::table('jawaban')->where('pertanyaan_id', $pertanyaan_id)->get();
+        return $jawaban;
     }
 }
 ?>
