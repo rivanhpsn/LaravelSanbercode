@@ -5,7 +5,7 @@
     
     <div class="card">
         <div class = "card-header">
-            <h2 class="card-title">Jawaban-jawaban dari pertanyaan {{$data['pertanyaan_id']}}</h2>
+            <h2 class="card-title">Jawaban-jawaban dari pertanyaan</h2>
         </div>
         <div class="card-body">
             <table id="datatable" class="table table-bordered table-striped">
