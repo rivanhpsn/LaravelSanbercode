@@ -2,10 +2,7 @@
 
 @section('content')
 <div class="content-wrapper ">
-    <div align="right">
-    <a class="btn btn-primary"  href="/pertanyaan/create" role="button" >+ Tambah Pertanyaan</a>
-    </div>
-    <div class="card">
+    <div class="card">    
         <div class="card-body">
             <table id="datatable" class="table table-bordered table-striped">
                 <thead>
@@ -22,13 +19,25 @@
                         <td> {{ $key + 1}}</td>
                         <td> {{ $pertanyaan -> judul}}</td>
                         <td> {{ $pertanyaan -> isi}}</td>
-                        <td><a class="btn btn-primary"  href="/jawaban/{{$pertanyaan->id}}" role="button" >Jawab</a></td>
+                        <td>
+                            <a class="btn btn-primary"  href="/jawaban/{{$pertanyaan->id}}" role="button" >Jawab</a>
+                            <a class="btn btn-primary"  href="/pertanyaan/{{$pertanyaan->id}}" role="button" >Detail</a>
+                            <a class="btn btn-primary"  href="/pertanyaan/{{$pertanyaan->id}}/edit" role="button" >Edit</a>
+                            <form action="/pertanyaan/{{$pertanyaan->id}}" method="POST" style="display: inline">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
                         {{-- <td> {{ $pertanyaan -> like}}</td>
                         <td> {{ $pertanyaan -> dislike}}</td> --}}
                         </tr>
                     @endforeach
                 </tbody>
             </table>
+            <div class= "ml-3 mt-3" align="right">
+                <a class="btn btn-primary"  href="/pertanyaan/create" role="button" >+ Tambah Pertanyaan</a>
+                </div>
         </div>
     </div>
 </div>
