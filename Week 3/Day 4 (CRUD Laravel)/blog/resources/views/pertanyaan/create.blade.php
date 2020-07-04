@@ -18,6 +18,8 @@
             <label for="description">Isi Pertanyaan : </label>
             <input type="text" class="form-control" name="isi" id="isi" placeholder="Masukkan isi pertanyaan">
           </div>
+        <input hidden name="created_at" value="{{\Carbon\Carbon::now()}}">
+        <input hidden name="updated_at" value="{{\Carbon\Carbon::now()}}">
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
       </form>

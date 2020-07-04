@@ -18,7 +18,7 @@
 // Route::get('/items', 'ItemController@index');
 // Route::get('/items/create', 'ItemController@create');
 // Route::post('/items', 'ItemController@store');
-
+Route::get('/', 'PertanyaanController@index');
 Route::get('/pertanyaan', 'PertanyaanController@index');
 Route::get('/pertanyaan/create', 'PertanyaanController@create');
 Route::post('/pertanyaan', 'PertanyaanController@store');

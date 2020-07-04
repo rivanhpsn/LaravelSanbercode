@@ -40,6 +40,7 @@ class PertanyaanController extends Controller
     }
 
     public function update($id, Request $request){
+        // dd($request->all());
         $pertanyaan = PertanyaanModels::update($id, $request->all());
 
         return redirect('/pertanyaan');

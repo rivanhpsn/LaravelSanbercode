@@ -26,6 +26,7 @@
                     @endforeach
                 </tbody>
             </table>
+            <a class="btn btn-primary"  href="/pertanyaan" role="button" >Kembali</a>
             <a class="btn btn-primary"  href="/jawaban/{{$data['pertanyaan_id']}}/create" role="button" >Masukkan Jawaban</a>
         </div>
     </div>

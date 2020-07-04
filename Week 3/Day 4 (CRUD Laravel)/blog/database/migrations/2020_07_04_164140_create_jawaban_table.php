@@ -20,7 +20,7 @@ class CreateJawabanTable extends Migration
             $table->integer('like');
             $table->integer('dislike');
             $table->unsignedBigInteger('pertanyaan_id');
-            $table->foreign('pertanyaan_id')->references('id')->on('pertanyaan');
+            $table->foreign('pertanyaan_id')->references('id')->on('pertanyaan')->onDelete('cascade');
             $table->timestamps();
         });
     }
