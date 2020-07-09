@@ -19,6 +19,8 @@ class CreateItemsTable extends Migration
             $table->string('description');
             $table->integer('stock');
             $table->integer('price');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }

@@ -24,6 +24,13 @@
         </div>
       </form>
 </div>
-</div>
+</div><script>
+    Swal.fire({
+        title: 'Berhasil!',
+        text: 'Memasangkan script sweet alert',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+    })
+</script>
 </div>
 @endsection

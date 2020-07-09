@@ -22,6 +22,18 @@
             <label for="price">Price : </label>
             <input type="number" class="form-control" name="price" id="price" placeholder="Enter price">
           </div>
+          <div class="form-group">
+            <label for="category_id">Category : </label>
+            <select name="category_id" class="form-control" id="category_id">
+              @foreach ($categories as $category)
+              <option value="{{$category->id}}">{{$category->name}} </option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tags">Tags : </label>
+            <input type="text" class="form-control" name="tags" placeholder="Enter Tags" id="tags">
+          </div>
           <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>

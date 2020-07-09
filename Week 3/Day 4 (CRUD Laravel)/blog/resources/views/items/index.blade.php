@@ -11,6 +11,7 @@
             <th scope="col">Description</th>
             <th scope="col">Stock</th>
             <th scope="col">Price</th>
+            <th scope="col">Category</th>
         </tr>
         </thead>
         <tbody>
@@ -21,6 +22,7 @@
                 <td> {{ $items -> description}}</td>
                 <td> {{ $items -> stock}}</td>
                 <td> {{ $items -> price}}</td>
+                <td> {{ $items -> category['name']}}</td>
                 </tr>
             @endforeach
         </tbody>
